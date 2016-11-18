@@ -4,6 +4,7 @@ package com.example.kevin.beaconwarning;
         import android.os.Vibrator;
         import android.app.Activity;
         import android.content.Context;
+        import android.support.v7.app.AppCompatActivity;
         import android.view.View;
         import android.view.View.OnClickListener;
         import android.widget.Button;
@@ -11,7 +12,7 @@ package com.example.kevin.beaconwarning;
  * Created by kevin on 18/11/2016.
  */
 
-public class PhoneVibration extends Activity {
+public class PhoneVibration extends AppCompatActivity {
     Vibrator mVibrator;
     Button vib1;
     public void onCreate(Bundle savedInstanceState) {
