@@ -16,6 +16,8 @@ public class PhoneVibration extends AppCompatActivity {
     Vibrator mVibrator;
     Button vib1;
     public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.main);
         // Find button 1
         vib1 = (Button) findViewById(R.id.vibration);
         mVibrator = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
