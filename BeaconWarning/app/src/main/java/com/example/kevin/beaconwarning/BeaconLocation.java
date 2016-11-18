@@ -28,21 +28,17 @@ public class BeaconLocation extends Activity {
         vib1 = (Button) findViewById(R.id.vibration);
         vib2 = (TextView) findViewById(R.id.text1);
         mVibrator = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
-        if(mVibrator.hasVibrator()) {
-            vib2.setText("vibyes");
-            Log.v("cCan Vibrate", "YES");
-        }
-        else {
-            vib2.setText("vibno");
-            Log.v("cCan Vibrate", "NO");
-        }
+
         // Click Listener for button1
         vib1.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                // vib1.setText("vibyes");
 
                 // Vibrates for 300 Milliseconds
-                mVibrator.vibrate(3000);
+                if(mVibrator.hasVibrator()) {
+                    vib2.setText("vib yes");
+                    mVibrator.vibrate(3000);
+                }
 
             }
         });
