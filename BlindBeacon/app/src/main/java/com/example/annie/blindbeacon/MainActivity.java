@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.ArrayAdapter;
+import android.widget.ListView;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -32,11 +33,16 @@ public class MainActivity extends AppCompatActivity {
             startActivityForResult(enableBtIntent, REQUEST_ENABLE_BT);
         }
 
-        List<String> btDevices = new ArrayList<String>();
+        ArrayAdapter<String> mArrayAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, items);
+        ListView listView = (ListView) findViewById(R.id.items);
+        listView.setAdapter(mArrayAdapter);
         Set<BluetoothDevice> pairedDevices = mBtAdapter.getBondedDevices();
         //If there are paired devices
-
-
+        if (pairedDevices.size() > 0) {
+            //loop through paired devices
+            for (BluetoothDevice device : pairedDevices) {
+                //Add the name and address to an array adapter to show in a ListView
+                mArrayAdapter.add(device.getName() + "\n" + device.getAddress());
             }
         }
     }
