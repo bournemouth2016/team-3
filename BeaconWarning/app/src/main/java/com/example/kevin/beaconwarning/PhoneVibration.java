@@ -4,7 +4,6 @@ package com.example.kevin.beaconwarning;
         import android.os.Vibrator;
         import android.app.Activity;
         import android.content.Context;
-        import android.support.v7.app.AppCompatActivity;
         import android.view.View;
         import android.view.View.OnClickListener;
         import android.widget.Button;
@@ -12,12 +11,14 @@ package com.example.kevin.beaconwarning;
  * Created by kevin on 18/11/2016.
  */
 
-public class PhoneVibration extends AppCompatActivity {
+public class PhoneVibration extends Activity {
     Vibrator mVibrator;
     Button vib1;
+
+    @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.main);
+        setContentView(R.layout.activity_beacon_location);
         // Find button 1
         vib1 = (Button) findViewById(R.id.vibration);
         mVibrator = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
