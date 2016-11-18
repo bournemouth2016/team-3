@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">BeaconWarning</string>
+    <string name="vibrate">Vibrate</string>
 </resources>
