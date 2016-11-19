@@ -62,7 +62,7 @@ public class BeaconLocation extends Activity {
         });
         vib3.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                long[] pattern = {0, 500, 1500};
+                long[] pattern = {0, 500, 1500,800, 700, 600, 1000, 700, 600};
 
                 if (mVibrator.hasVibrator()) {
                     vib3.setText("vib, yes");
@@ -74,7 +74,7 @@ public class BeaconLocation extends Activity {
         });
         vib4.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                long[] pattern = {0, 500, 1500300, 200, 100};
+                long[] pattern = {0, 300, 1300,600, 500, 400, 800, 500, 400};
 
                 if (mVibrator.hasVibrator()) {
                     vib4.setText("vib, yes");
