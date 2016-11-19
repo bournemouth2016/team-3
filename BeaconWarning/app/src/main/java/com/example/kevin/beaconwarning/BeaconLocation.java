@@ -25,7 +25,7 @@ public class BeaconLocation extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_beacon_location);
         // Find button 1
-        vib1 = (Button) findViewById(R.id.vibration);
+        vib1 = (Button) findViewById(R.id.wall);
         vib2 = (TextView) findViewById(R.id.text1);
         mVibrator = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
 
@@ -34,19 +34,14 @@ public class BeaconLocation extends Activity {
             public void onClick(View v) {
                // vib1.setText("vibyes");
 
-                // Vibrates for 300 Milliseconds
-               if(mVibrator.hasVibrator()) {
-                   vib2.setText("vib yes");
-                   mVibrator.vibrate(3000);
-               }
+                // Vibrates for 3000 Milliseconds
 
-            else {
-                    vib2.setText("vib no");
-                }
+                   mVibrator.vibrate(3000);
 
             }
         });
     }
+
 
 }
 

@@ -1,4 +1,7 @@
 <resources>
     <string name="app_name">BeaconWarning</string>
-    <string name="vibrate">Vibrate</string>
+    <string name="vibrate">Vibrate Wall</string>
+    <string name="vibrateTwo">Vibrate Stairs</string>
+    <string name="vibrateThree">Vibrate Doorway</string>
+    <string name="vibrateFour">Vibrate Emergency Exit</string>
 </resources>
