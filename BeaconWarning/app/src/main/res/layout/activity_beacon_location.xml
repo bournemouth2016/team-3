@@ -20,11 +20,21 @@
         />
 
     <Button
+        android:id="@+id/stairs"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/vibrateFour"
+        android:layout_centerVertical="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <Button
         android:id="@+id/emergencyExit"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/vibrate"
-        android:layout_centerVertical="true"
+        android:text="@string/vibrateTwo"
+        android:layout_marginTop="34dp"
+        android:layout_below="@+id/wall"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
 
@@ -32,21 +42,11 @@
         android:id="@+id/doorway"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/vibrate"
-        android:layout_marginTop="28dp"
-        android:layout_below="@+id/stairs"
+        android:text="@string/vibrateThree"
+        android:layout_below="@+id/emergencyExit"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
-
-    <Button
-        android:id="@+id/stairs"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/vibrate"
-        android:layout_marginTop="19dp"
-        android:layout_below="@+id/wall"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="17dp" />
 
 
 </RelativeLayout>

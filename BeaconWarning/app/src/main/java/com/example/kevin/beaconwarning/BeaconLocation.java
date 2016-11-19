@@ -18,7 +18,9 @@ import android.widget.TextView;
 public class BeaconLocation extends Activity {
     Vibrator mVibrator;
     Button vib1;
-    TextView vib2;
+    Button vib2;
+    Button vib3;
+    Button vib4;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -26,7 +28,10 @@ public class BeaconLocation extends Activity {
         setContentView(R.layout.activity_beacon_location);
         // Find button 1
         vib1 = (Button) findViewById(R.id.wall);
-        vib2 = (TextView) findViewById(R.id.text1);
+        vib2 = (Button) findViewById(R.id.doorway);
+        vib3 = (Button) findViewById(R.id.stairs);
+        vib4 = (Button) findViewById(R.id.emergencyExit);
+
         mVibrator = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
 
         // Click Listener for button1
@@ -40,7 +45,19 @@ public class BeaconLocation extends Activity {
 
             }
         });
+        vib2.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                long[] pattern = {0, 100, 1000, 300, 200, 100, 500, 200, 100};
+
+                    mVibrator.vibrate(pattern, -1);
+
+
+            }
+        });
+
+
     }
+
 
 
 }
