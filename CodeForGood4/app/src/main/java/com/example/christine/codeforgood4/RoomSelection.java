@@ -10,10 +10,7 @@ import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import static android.R.attr.duration;
-import static com.example.christine.codeforgood4.R.id.text;
-
-public class Main3Activity extends AppCompatActivity {
+public class RoomSelection extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,7 +41,7 @@ public class Main3Activity extends AppCompatActivity {
             public void onItemClick(AdapterView<?> parent, View viewClicked, int position, long id){
                 TextView textView = (TextView) viewClicked;
                 String message = "You clicked # " + position + ", which is string: " + textView.getText().toString();
-                Toast.makeText(Main3Activity.this, message, Toast.LENGTH_LONG).show();
+                Toast.makeText(RoomSelection.this, message, Toast.LENGTH_LONG).show();
             }
         });
     }
