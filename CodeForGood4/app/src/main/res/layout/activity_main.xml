@@ -20,7 +20,7 @@
         android:layout_height="100dp"
         android:layout_marginTop="180dp"
         android:id="@+id/button1"
-        android:onClick="main2screen"/>
+        />
 
     <Button
         android:text="Female"
@@ -28,7 +28,7 @@
         android:layout_marginTop="280dp"
         android:layout_height="100dp"
         android:id="@+id/button2"
-        android:onClick="main2screen"/>
+        />
 
 
 

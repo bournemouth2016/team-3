@@ -8,6 +8,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.TextView;
 
 public class Main2Screen extends AppCompatActivity {
@@ -16,26 +17,22 @@ public class Main2Screen extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main2_screen);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
 
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
+        /**Button next = (Button) findViewById(R.id.button2);
+        next.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
+                Intent intent = new Intent();
+                setResult(RESULT_OK, intent);
+                finish();
             }
-        });
 
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.content_main2_screen);
+        });*/
 
-        //ViewGroup layout = (ViewGroup) findViewById(R.id.content_main2_screen);
     }
 
     public void main3screen(View view) {
-
+        Intent intent = new Intent(this, Main3Activity.class);
+        startActivity(intent);
 
     }
 }

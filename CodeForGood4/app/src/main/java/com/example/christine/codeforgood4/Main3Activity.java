@@ -1,5 +1,6 @@
 package com.example.christine.codeforgood4;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -17,7 +18,10 @@ public class Main3Activity extends AppCompatActivity {
         setContentView(R.layout.activity_main3);
 
         populateListView();
+
+        Intent intent = getIntent();
     }
+
 
     private void populateListView(){
 
@@ -26,8 +30,8 @@ public class Main3Activity extends AppCompatActivity {
         // Build adapter
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, R.layout.item, rooms);
         // Configure list view
-        ListView list = (ListView) findViewById(R.id.listViewMain);
-        list.setAdapter(adapter);
+        //ListView list = (ListView) findViewById(R.id.listViewMain);
+        //list.setAdapter(adapter);
     }
 
 }
