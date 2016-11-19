@@ -28,7 +28,7 @@
         android:layout_width="match_parent"
         android:layout_height="100dp"
         android:layout_marginTop="180dp"
-        android:id="@+id/button1"
+        android:id="@+id/guideDogChoice"
         android:onClick="main3screen"/>
 
     <Button
@@ -36,7 +36,7 @@
         android:layout_width="match_parent"
         android:layout_marginTop="280dp"
         android:layout_height="100dp"
-        android:id="@+id/button2"
+        android:id="@+id/caneChoice"
         android:onClick="main3screen"/>
 
 </android.support.design.widget.CoordinatorLayout>
