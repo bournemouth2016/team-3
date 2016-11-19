@@ -18,21 +18,28 @@ public class Main2Screen extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main2_screen);
 
-        /**Button next = (Button) findViewById(R.id.button2);
+        Button next = (Button) findViewById(R.id.button1);
         next.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
-                Intent intent = new Intent();
-                setResult(RESULT_OK, intent);
-                finish();
+                Intent myIntent = new Intent(view.getContext(), Main3Activity.class);
+                startActivityForResult(myIntent, 0);
             }
 
-        });*/
+        });
+         next = (Button) findViewById(R.id.button2);
+        next.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View view) {
+                Intent myIntent = new Intent(view.getContext(), Main3Activity.class);
+                startActivityForResult(myIntent, 0);
+            }
+
+        });
 
     }
 
-    public void main3screen(View view) {
+   /** public void main3screen(View view) {
         Intent intent = new Intent(this, Main3Activity.class);
         startActivity(intent);
 
-    }
+    } */
 }

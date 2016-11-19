@@ -25,13 +25,13 @@ public class Main3Activity extends AppCompatActivity {
 
     private void populateListView(){
 
+        ListView list = (ListView) findViewById(R.id.listViewMain);
         // Create list of items
         String rooms[] = {"Auditorium 1", "Auditorium 2", "Room 1", "Room 2", "Bathroom 1", "Bathroom 2"};
         // Build adapter
-        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, R.layout.item, rooms);
+        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, R.layout.item, R.id.room, rooms);
         // Configure list view
-        //ListView list = (ListView) findViewById(R.id.listViewMain);
-        //list.setAdapter(adapter);
+        list.setAdapter(adapter);
     }
 
 }
