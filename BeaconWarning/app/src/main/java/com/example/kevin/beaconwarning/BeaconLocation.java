@@ -35,9 +35,9 @@ public class BeaconLocation extends Activity {
                // vib1.setText("vibyes");
 
                 // Vibrates for 300 Milliseconds
-                if(mVibrator.hasVibrator()) {
+               if(mVibrator.hasVibrator()) {
                     vib2.setText("vib yes");
-                  //  mVibrator.vibrate(3000);
+                  mVibrator.vibrate(3000);
                 }
                 else {
                     vib2.setText("vib no");
@@ -48,3 +48,4 @@ public class BeaconLocation extends Activity {
     }
 
 }
+
