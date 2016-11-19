@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context="com.example.christine.codeforgood4.MainActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+    </android.support.design.widget.AppBarLayout>
+
+    <Button
+        android:text="Male"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginTop="180dp"
+        android:id="@+id/button1"
+        android:onClick="main2screen"/>
+
+    <Button
+        android:text="Female"
+        android:layout_width="match_parent"
+        android:layout_marginTop="280dp"
+        android:layout_height="100dp"
+        android:id="@+id/button2"
+        android:onClick="main2screen"/>
+
+
+
+</android.support.design.widget.CoordinatorLayout>
