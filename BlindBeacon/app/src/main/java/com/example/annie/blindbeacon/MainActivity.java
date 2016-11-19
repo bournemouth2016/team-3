@@ -13,8 +13,6 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Set;
 
-import static android.R.id.list;
-
 public class MainActivity extends AppCompatActivity {
 
     private final static int REQUEST_ENABLE_BT = 1;
@@ -35,8 +33,8 @@ public class MainActivity extends AppCompatActivity {
             startActivityForResult(enableBtIntent, REQUEST_ENABLE_BT);
         }
 
-        ArrayAdapter<String> mArrayAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, list);
-        ListView listView = (ListView) findViewById(R.id.list);
+        ArrayAdapter<String> mArrayAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1);
+        ListView listView = (ListView) findViewById(R.id.banana);
         listView.setAdapter(mArrayAdapter);
         Set<BluetoothDevice> pairedDevices = mBtAdapter.getBondedDevices();
         //If there are paired devices
