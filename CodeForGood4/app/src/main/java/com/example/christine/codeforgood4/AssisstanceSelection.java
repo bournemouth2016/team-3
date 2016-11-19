@@ -11,7 +11,7 @@ public class AssisstanceSelection extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main2_screen);
+        setContentView(R.layout.assisstance_selection_screen);
 
         Button next = (Button) findViewById(R.id.guideDogChoice);
         next.setOnClickListener(new View.OnClickListener() {
