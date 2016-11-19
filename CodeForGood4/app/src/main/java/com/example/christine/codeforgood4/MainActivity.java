@@ -21,7 +21,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Button next = (Button) findViewById(R.id.button1);
+        Button next = (Button) findViewById(R.id.maleChoice);
         next.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
                 Intent myIntent = new Intent(view.getContext(), Main2Screen.class);
@@ -29,7 +29,7 @@ public class MainActivity extends AppCompatActivity {
             }
 
         });
-         next = (Button) findViewById(R.id.button2);
+         next = (Button) findViewById(R.id.femaleChoice);
         next.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
                 Intent myIntent = new Intent(view.getContext(), Main2Screen.class);
@@ -38,11 +38,5 @@ public class MainActivity extends AppCompatActivity {
 
         });
     }
-   /** public void main2screen(View view) {
-
-        Intent intent = new Intent(this, Main2Screen.class);
-        startActivity(intent);
-
-    }*/
 
 }

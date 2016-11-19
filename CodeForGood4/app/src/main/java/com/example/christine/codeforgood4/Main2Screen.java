@@ -18,7 +18,7 @@ public class Main2Screen extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main2_screen);
 
-        Button next = (Button) findViewById(R.id.button1);
+        Button next = (Button) findViewById(R.id.guideDogChoice);
         next.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
                 Intent myIntent = new Intent(view.getContext(), Main3Activity.class);
@@ -26,7 +26,7 @@ public class Main2Screen extends AppCompatActivity {
             }
 
         });
-         next = (Button) findViewById(R.id.button2);
+         next = (Button) findViewById(R.id.caneChoice);
         next.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
                 Intent myIntent = new Intent(view.getContext(), Main3Activity.class);
@@ -36,10 +36,4 @@ public class Main2Screen extends AppCompatActivity {
         });
 
     }
-
-   /** public void main3screen(View view) {
-        Intent intent = new Intent(this, Main3Activity.class);
-        startActivity(intent);
-
-    } */
 }

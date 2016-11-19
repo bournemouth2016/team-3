@@ -2,13 +2,16 @@ package com.example.christine.codeforgood4;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
+import android.widget.TextView;
+import android.widget.Toast;
+
+import static android.R.attr.duration;
+import static com.example.christine.codeforgood4.R.id.text;
 
 public class Main3Activity extends AppCompatActivity {
 
@@ -17,21 +20,33 @@ public class Main3Activity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main3);
 
-        populateListView();
-
         Intent intent = getIntent();
-    }
 
+        populateListView();
+        registerClickCallBack();
+
+    }
 
     private void populateListView(){
 
         ListView list = (ListView) findViewById(R.id.listViewMain);
-        // Create list of items
+
         String rooms[] = {"Auditorium 1", "Auditorium 2", "Room 1", "Room 2", "Bathroom 1", "Bathroom 2"};
-        // Build adapter
+
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, R.layout.item, R.id.room, rooms);
-        // Configure list view
         list.setAdapter(adapter);
+    }
+    private void registerClickCallBack(){
+        ListView list = (ListView) findViewById(R.id.listViewMain);
+        list.setOnItemClickListener(new AdapterView.OnItemClickListener(){
+
+            @Override
+            public void onItemClick(AdapterView<?> parent, View viewClicked, int position, long id){
+                TextView textView = (TextView) viewClicked;
+                String message = "You clicked # " + position + ", which is string: " + textView.getText().toString();
+                Toast.makeText(Main3Activity.this, message, Toast.LENGTH_LONG).show();
+            }
+        });
     }
 
 }
